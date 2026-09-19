@@ -1,0 +1,18 @@
+Khushi Yewale
+Email: khushi.yewale@example.com | Nagpur, India
+
+Summary:
+Final-year AI/ML engineering student with hands-on experience building
+full-stack and GenAI applications, including RAG systems and Streamlit apps.
+
+Skills: Python, Streamlit, LlamaIndex, ChromaDB, SQL Server, Flask, Machine Learning
+
+Experience:
+NRSolution4U — AI/ML Intern (2026 - Present)
+- Built and deployed GenAI-adjacent tools as part of internship work
+- Collaborated with mentor Nilesh Gupta on project delivery
+
+Education:
+G.H. Raisoni College of Engineering (GHRCE), Nagpur
+B.E. in Artificial Intelligence and Machine Learning
+Expected graduation: 2027

@@ -1,0 +1,78 @@
+2026-09-08 15:07:52,860 | INFO | HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-09-08 15:12:42,317 | INFO | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-08 15:12:42,321 | WARNING | Attempt 1 failed | 1 validation error for ResumeData
+full_name
+  Field required [type=missing, input_value={'$defs': {'Education': {...Data', 'type': 'object'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.13/v/missing
+2026-09-08 15:12:56,141 | INFO | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-08 15:12:56,142 | WARNING | Attempt 2 failed | 1 validation error for ResumeData
+full_name
+  Field required [type=missing, input_value={'$defs': {'Education': {...Data', 'type': 'object'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.13/v/missing
+2026-09-08 15:13:10,587 | INFO | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-08 15:13:10,587 | WARNING | Attempt 3 failed | 1 validation error for ResumeData
+full_name
+  Field required [type=missing, input_value={'$defs': {'Education': {...Data', 'type': 'object'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.13/v/missing
+2026-09-08 15:13:10,587 | ERROR | GAVE UP | last_raw_output={
+  "$defs": {
+    "Education": {
+      "properties": {
+        "institution": {
+          "title": "Institution",
+          "type": "string"
+        },
+        "degree": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Degree"
+        },
+        "field_of_study": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+ 
+2026-09-08 15:15:30,297 | INFO | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-08 15:15:30,298 | WARNING | Attempt 1 failed | Expecting ',' delimiter: line 67 column 3 (char 1251)
+2026-09-08 15:15:41,453 | INFO | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-08 15:15:41,454 | WARNING | Attempt 2 failed | 1 validation error for ResumeData
+full_name
+  Field required [type=missing, input_value={'Education': {'instituti...ple.com', 'Phone': None}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.13/v/missing
+2026-09-08 15:15:57,351 | INFO | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-08 15:15:57,353 | WARNING | Attempt 3 failed | 1 validation error for ResumeData
+full_name
+  Field required [type=missing, input_value={'$defs': {'Education': {...Data', 'type': 'object'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.13/v/missing
+2026-09-08 15:15:57,353 | ERROR | GAVE UP | last_raw_output={
+  "$defs": {
+    "Education": {
+      "properties": {
+        "institution": "null",
+        "degree": "null",
+        "field_of_study": "null",
+        "graduation_year": "null"
+      },
+      "required": ["institution", "degree", "field_of_study", "graduation_year"],
+      "title": "Education",
+      "type": "object"
+    },
+    "Experience": {
+      "properties": {
+        "company": "null",
+        "title": "null",
+        "start_date": "null",
+        "end_date": "null",
+        "highlight
+2026-09-08 15:18:38,813 | INFO | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-08 15:52:04,461 | INFO | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-08 16:01:59,560 | INFO | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-08 16:07:48,838 | INFO | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
