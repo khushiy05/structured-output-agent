@@ -76,3 +76,95 @@ full_name
 2026-09-08 15:52:04,461 | INFO | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
 2026-09-08 16:01:59,560 | INFO | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
 2026-09-08 16:07:48,838 | INFO | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-19 23:32:46,459 | INFO | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-19 23:32:46,464 | WARNING | Attempt 1 failed | 2 validation errors for ResumeData
+projects.0.description
+  Input should be a valid list [type=list_type, input_value='Built a local retrieval-...x, ChromaDB, and Ollama', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/list_type
+projects.1.description
+  Input sh
+2026-09-19 23:32:53,056 | INFO | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-19 23:32:53,057 | WARNING | Attempt 2 failed | 2 validation errors for ResumeData
+projects
+  Input should be a valid list [type=list_type, input_value={'title': 'Personal RAG C...h over personal notes']}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.13/v/list_type
+certifications
+  Input should be a valid list 
+2026-09-19 23:33:00,460 | INFO | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-19 23:33:00,460 | WARNING | Attempt 3 failed | 1 validation error for ResumeData
+projects
+  Input should be a valid list [type=list_type, input_value={'title': 'Personal RAG C..., ChromaDB, and Ollama'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.13/v/list_type
+2026-09-19 23:33:00,460 | ERROR | GAVE UP | last_raw_output={
+  "full_name": "Khushi Yewale",
+  "email": "khushi.yewale@email.com",
+  "skills": [
+    "Python",
+    "SQL"
+  ],
+  "experience": [
+    {
+      "company": "NRSolution4U",
+      "title": "AI/ML Intern",
+      "start_date": "June 2026",
+      "end_date": "Present",
+      "highlights": [
+        "Built and maintained an AI resume analyzer with ATS scoring using Streamlit",
+        "Collaborated with mentor on structured-output extraction pipelines using LLMs"
+      ]
+    },
+    {
+      "company": 
+2026-09-19 23:35:17,129 | INFO | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-19 23:35:17,131 | WARNING | Attempt 1 failed | 4 validation errors for ResumeData
+experience.1.company
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.13/v/string_type
+experience.1.title
+  Input should be a valid string [type=string_type, i
+2026-09-19 23:35:22,599 | INFO | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-19 23:35:22,600 | WARNING | Attempt 2 failed | 1 validation error for ResumeData
+projects
+  Input should be a valid list [type=list_type, input_value={'title': 'Personal RAG C..., ChromaDB, and Ollama'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.13/v/list_type
+2026-09-19 23:35:28,612 | INFO | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-19 23:35:43,825 | INFO | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-19 23:35:43,826 | WARNING | Attempt 1 failed | 2 validation errors for ResumeData
+projects.0.description
+  Input should be a valid list [type=list_type, input_value='Built a local retrieval-...x, ChromaDB, and Ollama', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/list_type
+projects.1.description
+  Input sh
+2026-09-19 23:35:50,938 | INFO | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-19 23:35:50,939 | WARNING | Attempt 2 failed | Expecting ':' delimiter: line 18 column 3 (char 1219)
+2026-09-19 23:35:58,026 | INFO | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-19 23:36:24,830 | INFO | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-19 23:36:24,831 | WARNING | Attempt 1 failed | 3 validation errors for ResumeData
+projects.0.description
+  Input should be a valid list [type=list_type, input_value='Built a local retrieval-...x, ChromaDB, and Ollama', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/list_type
+projects.1.description
+  Input sh
+2026-09-19 23:36:33,272 | INFO | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-19 23:36:33,273 | WARNING | Attempt 2 failed | 2 validation errors for ResumeData
+projects.0.description
+  Input should be a valid list [type=list_type, input_value='Built a local retrieval-...x, ChromaDB, and Ollama', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/list_type
+projects.1.description
+  Input sh
+2026-09-19 23:36:39,796 | INFO | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-19 23:36:39,797 | WARNING | Attempt 3 failed | 2 validation errors for ResumeData
+projects.0.description
+  Input should be a valid list [type=list_type, input_value='Built a local retrieval-...x, ChromaDB, and Ollama', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/list_type
+projects.1.description
+  Input sh
+2026-09-19 23:36:39,797 | ERROR | GAVE UP | last_raw_output={
+  "full_name": "Khushi Yewale",
+  "email": "khushi.yewale@email.com",
+  "skills": ["Python", "SQL"],
+  "experience": [
+    {"company": "NRSolution4U", "title": "AI/ML Intern", "start_date": "2026-06", "end_date": "Present", "highlights": ["Built an AI resume analyzer with ATS scoring using Streamlit"]},
+    {"company": "Campus Connect", "title": "Full-stack Flask + SQL Server web app", "start_date": "2026-06", "end_date": "Present", "highlights": ["Built a local retrieval-augmented generation 
+2026-09-19 23:36:50,099 | INFO | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-19 23:41:00,907 | INFO | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"

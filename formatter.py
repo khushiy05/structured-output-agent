@@ -60,9 +60,10 @@ def render_resume(data: ResumeData) -> str:
         lines.append(", ".join(data.skills))
         lines.append("")
 
-    if data.certifications:
+    certs = [c for c in (data.certifications or []) if c and c.strip().lower() not in ("none", "n/a", "")]
+    if certs:
         lines.append("CERTIFICATIONS & ACHIEVEMENTS")
-        for cert in data.certifications:
+        for cert in certs:
             lines.append(f"  • {cert}")
 
     return "\n".join(lines)
