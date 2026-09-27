@@ -7,7 +7,7 @@ from anthropic import Anthropic
 from pydantic import BaseModel, ValidationError
 import ollama
 
-MODEL = "llama3.2:1b"
+MODEL = "llama3.2:latest"
 T = TypeVar("T", bound=BaseModel)
 
 logging.basicConfig(
