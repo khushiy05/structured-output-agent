@@ -58,6 +58,12 @@ Rules:
 - Return ONLY the JSON object with real extracted values. No markdown fences, no commentary.
 - If a field isn't present in the text, omit it or use null.
 - Do not invent information that isn't in the source text.
+- Fields marked as "array" or "type: array" in the schema MUST ALWAYS be JSON arrays
+  (using square brackets [ ]), even if there is only ONE item. Never output a single
+  object by itself for these fields — always wrap it in a list.
+  Example: "projects": [{{"title": "My Project"}}]  ← correct
+           "projects": {{"title": "My Project"}}     ← WRONG, do not do this
+- This applies especially to: skills, experience, education, projects, certifications.
 {feedback_block}
 
 RESUME TEXT:

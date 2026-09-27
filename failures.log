@@ -168,3 +168,70 @@ projects.1.description
     {"company": "Campus Connect", "title": "Full-stack Flask + SQL Server web app", "start_date": "2026-06", "end_date": "Present", "highlights": ["Built a local retrieval-augmented generation 
 2026-09-19 23:36:50,099 | INFO | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
 2026-09-19 23:41:00,907 | INFO | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-20 01:12:41,586 | INFO | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-20 01:12:41,587 | WARNING | Attempt 1 failed | 1 validation error for ResumeData
+projects.0.description
+  Input should be a valid list [type=list_type, input_value='A web app for colleges i...pur to connect students', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/list_type
+2026-09-20 01:12:45,867 | INFO | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-20 01:12:45,868 | WARNING | Attempt 2 failed | 1 validation error for ResumeData
+projects.0.description
+  Input should be a valid list [type=list_type, input_value='Web app for colleges in ...pur to connect students', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/list_type
+2026-09-20 01:12:49,373 | INFO | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-20 01:12:49,373 | WARNING | Attempt 3 failed | 1 validation error for ResumeData
+projects
+  Input should be a valid list [type=list_type, input_value={'description': 'Web app ...ur to connect students'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.13/v/list_type
+2026-09-20 01:12:49,374 | ERROR | GAVE UP | last_raw_output={
+  "full_name": "khushi yewale",
+  "email": "khushi.yewale@email.com",
+  "skills": ["Python", "Flask", "SQL", "Streamlit", "Git", "LLMS", "Prompt Engineering"],
+  "experience": [
+    {
+      "company": "NRSolution4U",
+      "title": "AI ML Intern",
+      "start_date": "June",
+      "end_date": "Present",
+      "highlights": ["Build resume analyzer for ATS score"]
+    }
+  ],
+  "education": [
+    {
+      "institution": "GH Raisoni College of Engineering",
+      "degree": "B.E in AI and ML",
+     
+2026-09-20 01:13:21,356 | INFO | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-20 01:13:21,357 | WARNING | Attempt 1 failed | 1 validation error for ResumeData
+projects.0.description
+  Input should be a valid list [type=list_type, input_value='built resume analyzer that checks ATS score', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/list_type
+2026-09-20 01:13:27,039 | INFO | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-20 01:13:27,040 | WARNING | Attempt 2 failed | 4 validation errors for ResumeData
+experience.0.highlights
+  Input should be a valid list [type=list_type, input_value='built resume analyzer that checks ATS score', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/list_type
+projects.0.description
+  Input should b
+2026-09-20 01:13:34,089 | INFO | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-20 01:13:34,090 | WARNING | Attempt 3 failed | 2 validation errors for ResumeData
+projects.0.description
+  Input should be a valid list [type=list_type, input_value='Built resume analyzer that checks ATS score', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/list_type
+projects.1.description
+  Input should be
+2026-09-20 01:13:34,090 | ERROR | GAVE UP | last_raw_output={
+  "full_name": "Khushi Yewale",
+  "email": "khushi.yewale@email.com",
+  "skills": ["Python", "SQL"],
+  "experience": [
+    {"company": "NRSolution4U", "title": "AI ML Intern", "start_date": "June", "end_date": "Present", "highlights": ["Built resume analyzer that checks ATS score"]},
+    {"company": "GH Raisoni College of Engineering", "title": "B.E in AI and ML", "start_date": "2020", "end_date": null, "highlights": ["Got certificate in prompt engineering from some online course"]}
+  ],
+  "ed
+2026-09-20 01:13:44,772 | INFO | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-20 01:13:44,774 | WARNING | Attempt 1 failed | 1 validation error for ResumeData
+projects.0.description
+  Input should be a valid list [type=list_type, input_value='Web app for colleges in ...pur to connect students', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/list_type
+2026-09-20 01:13:52,714 | INFO | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
