@@ -37,3 +37,13 @@ class ResumeData(BaseModel):
     education: List[Education] = Field(default_factory=list)
     projects: List[Project] = Field(default_factory=list)
     certifications: List[str] = Field(default_factory=list)
+
+
+class ParagraphData(BaseModel):
+    summary: str
+    people: List[str] = Field(default_factory=list)
+    organizations: List[str] = Field(default_factory=list)
+    dates: List[str] = Field(default_factory=list)
+    amounts: List[str] = Field(default_factory=list)
+    action_items: List[str] = Field(default_factory=list)
+    key_points: List[str] = Field(default_factory=list)

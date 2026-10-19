@@ -3,7 +3,6 @@ import logging
 import os
 from typing import Type, TypeVar
 
-from anthropic import Anthropic
 from pydantic import BaseModel, ValidationError
 import ollama
 
@@ -22,15 +21,9 @@ class StructuredOutputError(Exception):
     pass
 
 
-def _build_prompt(schema, source_text, error_feedback=""):
-    schema_json = json.dumps(schema.model_json_schema(), indent=2)
-    feedback_block = ""
-    if error_feedback:
-        feedback_block = (
-            f"\n\nYour previous attempt was INVALID. Fix this error:\n{error_feedback}\n"
-        )
-
-    example = """{
+# One formatting example per schema, keyed by the schema class name.
+EXAMPLES = {
+    "ResumeData": """{
   "full_name": "Jane Doe",
   "email": "jane@example.com",
   "skills": ["Python", "SQL"],
@@ -40,14 +33,42 @@ def _build_prompt(schema, source_text, error_feedback=""):
   "education": [
     {"institution": "MIT", "degree": "B.S.", "field_of_study": "CS", "graduation_year": "2021"}
   ]
-}"""
+}""",
+    "ParagraphData": """{
+  "summary": "A short neutral summary of the text.",
+  "people": ["Person A"],
+  "organizations": ["Company B"],
+  "dates": ["1 March"],
+  "amounts": ["$500"],
+  "action_items": ["Do task X by Friday"],
+  "key_points": ["Main point one"]
+}""",
+}
 
-    return f"""You are a data extraction tool. Read the RESUME TEXT below and output
+LABELS = {
+    "ResumeData": "RESUME TEXT",
+    "ParagraphData": "PARAGRAPH TEXT",
+}
+
+
+def _build_prompt(schema, source_text, error_feedback=""):
+    schema_json = json.dumps(schema.model_json_schema(), indent=2)
+    name = schema.__name__
+    example = EXAMPLES.get(name, "{}")
+    label = LABELS.get(name, "SOURCE TEXT")
+
+    feedback_block = ""
+    if error_feedback:
+        feedback_block = (
+            f"\n\nYour previous attempt was INVALID. Fix this error:\n{error_feedback}\n"
+        )
+
+    return f"""You are a data extraction tool. Read the {label} below and output
 a JSON object containing the ACTUAL VALUES extracted from it.
 
 Do NOT output the schema. Do NOT output field types or descriptions.
-Output REAL DATA, like this example (this is just a formatting example,
-not the real answer):
+Output REAL DATA, formatted like this example. The example is ONLY for
+formatting. NEVER copy any values from it:
 
 {example}
 
@@ -56,17 +77,13 @@ The fields you must fill in, with their types:
 
 Rules:
 - Return ONLY the JSON object with real extracted values. No markdown fences, no commentary.
-- If a field isn't present in the text, omit it or use null.
-- Do not invent information that isn't in the source text.
-- Fields marked as "array" or "type: array" in the schema MUST ALWAYS be JSON arrays
-  (using square brackets [ ]), even if there is only ONE item. Never output a single
-  object by itself for these fields — always wrap it in a list.
-  Example: "projects": [{{"title": "My Project"}}]  ← correct
-           "projects": {{"title": "My Project"}}     ← WRONG, do not do this
-- This applies especially to: skills, experience, education, projects, certifications.
+- Only use information that appears in the {label}. Never invent or guess values.
+- If a text field isn't present, use null. If a list field has nothing, use [].
+- Fields typed as "array" in the schema MUST ALWAYS be JSON arrays (square brackets),
+  even if there is only ONE item. Never output a single object where a list is expected.
 {feedback_block}
 
-RESUME TEXT:
+{label}:
 ---
 {source_text}
 ---

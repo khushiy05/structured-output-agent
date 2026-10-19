@@ -424,3 +424,25 @@ certifications
     {
       "institution": "GH RAISONI COLLEGE
 2026-09-28 02:25:50,992 | INFO | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-10-19 16:40:50,157 | INFO | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-10-19 17:25:14,870 | INFO | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-10-19 17:25:14,876 | WARNING | Attempt 1 failed | 4 validation errors for ResumeData
+skills
+  Input should be a valid list [type=list_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.13/v/list_type
+education
+  Input should be a valid list [type=list_type, input_value=None, input_type=NoneT
+2026-10-19 17:25:22,477 | INFO | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-10-19 17:27:33,658 | INFO | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-10-19 17:27:33,668 | WARNING | Attempt 1 failed | 1 validation error for ResumeData
+projects.0.description
+  Input should be a valid list [type=list_type, input_value='Using Python and scikit-learn', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/list_type
+2026-10-19 17:27:48,429 | INFO | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-10-19 17:57:20,629 | INFO | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-10-19 17:57:20,630 | WARNING | Attempt 1 failed | 1 validation error for ParagraphData
+summary
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.13/v/string_type
+2026-10-19 17:57:26,607 | INFO | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-10-19 17:58:04,714 | INFO | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
